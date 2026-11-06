@@ -1,0 +1,62 @@
+name: Build and deploy to GitHub Pages
+
+on:
+  push:
+    branches: [master, main]
+  workflow_dispatch:
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v7
+      - name: Restore Cecil cache
+        id: cache
+        uses: actions/cache/restore@v6
+        with:
+          path: ./.cache
+          key: cecil-cache-${{ runner.os }}-${{ github.sha }}
+          restore-keys: |
+            cecil-cache-${{ runner.os }}-
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v6
+      - name: Build site
+        id: build
+        uses: Cecilapp/Cecil-Action@v4
+        with:
+          pages: false
+          cache: false
+          options: --baseurl=${{ steps.pages.outputs.base_url }}/
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: ${{ steps.build.outputs.output_dir }}
+      - name: Save Cecil cache
+        if: steps.cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v6
+        with:
+          path: ./.cache
+          key: cecil-cache-${{ runner.os }}-${{ github.sha }}
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

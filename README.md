@@ -12,6 +12,12 @@ php cecil.phar serve
 
 Open the address printed by Cecil. To publish, run `php cecil.phar build` and deploy the contents of `_site` to a static web host. Set `baseurl` in `cecil.yml` to the final website URL before publishing.
 
+## Deploy to GitHub Pages
+
+Push the project to a GitHub repository, then open **Settings → Pages** and select **GitHub Actions** as the publishing source. The workflow at `.github\workflows\build-and-deploy.yml` builds and deploys the site after each push to `main` or `master`; it can also be started from the **Actions** tab using **Run workflow**. The workflow gets the correct base URL from GitHub Pages, including the repository path for a project site.
+
+Monitor the run in **Actions** and open the URL shown under **Settings → Pages** after deployment. The repository and plan must be eligible for GitHub Pages. Site content, including photos and contact details, will be public.
+
 ## Languages
 
 The site is available in English at the root and French at `fr\`. Visitors can switch languages in the header. French interface translations are maintained in `translations\messages.fr_FR.yaml`. After editing translations, run `php cecil.phar build --clear-cache` to ensure Cecil uses the updated text.
