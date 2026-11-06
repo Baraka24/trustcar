@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="{{ site.language }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description }}">
+  <meta name="theme-color" content="#050514">
+  <title>TrustCar Auto | {{ page.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ site.language == 'fr' ? '../' : '' }}styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="{{ 'TrustCar Auto home'|trans }}">
+        <img src="{{ site.language == 'fr' ? '../' : '' }}images/TrustCarAutoLogo.png" alt="" width="500" height="500">
+      </a>
+      <nav class="navigation" aria-label="{{ 'Main navigation'|trans }}">
+        <a href="#about">{{ 'About us'|trans }}</a>
+        <a href="#process">{{ 'How it works'|trans }}</a>
+        <a href="#deliveries">{{ 'Our deliveries'|trans }}</a>
+      </nav>
+      <a class="language-switch" href="{{ site.language == 'fr' ? '../' : 'fr/' }}" lang="{{ site.language == 'fr' ? 'en' : 'fr' }}" hreflang="{{ site.language == 'fr' ? 'en' : 'fr' }}">{{ site.language == 'fr' ? 'English' : 'Français' }}</a>
+      <a class="button button-dark header-cta" href="#contact">{{ 'Get in touch'|trans }} <span aria-hidden="true">↗</span></a>
+      <details class="mobile-menu">
+        <summary>Menu <span aria-hidden="true">☰</span></summary>
+        <nav class="mobile-navigation" aria-label="{{ 'Mobile navigation'|trans }}">
+          <a href="#about">{{ 'About us'|trans }}</a>
+          <a href="#process">{{ 'How it works'|trans }}</a>
+          <a href="#deliveries">{{ 'Our deliveries'|trans }}</a>
+          <a href="#contact">{{ 'Get in touch'|trans }}</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-image" role="img" aria-label="{{ 'A car on an open road'|trans }}"></div>
+      <div class="hero-shade"></div>
+      <div class="container hero-content">
+        <div class="eyebrow hero-eyebrow"><span class="eyebrow-line"></span> {{ 'JAPAN TO DR CONGO'|trans }}</div>
+        <h1>{{ 'A better journey'|trans }}<br>{{ 'starts with'|trans }} <em>{{ 'trust.'|trans }}</em></h1>
+        <p>{{ 'Quality Japanese vehicles, thoughtfully sourced and safely delivered to your driveway.'|trans }}</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#process">{{ 'Discover how it works'|trans }} <span aria-hidden="true">↗</span></a>
+          <a class="hero-link" href="#about">{{ 'Get to know us'|trans }} <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="container hero-bottom">
+        <span>{{ 'YOUR JOURNEY, OUR COMMITMENT'|trans }}</span>
+        <span>01 / 04</span>
+      </div>
+    </section>
+
+    <div class="promise-strip">
+      <div class="container promise-inner">
+        <span><span class="promise-icon">✳</span> {{ 'Carefully selected vehicles'|trans }}</span>
+        <span><span class="promise-icon">✳</span> {{ 'A transparent process'|trans }}</span>
+        <span><span class="promise-icon">✳</span> {{ 'Delivered with care'|trans }}</span>
+      </div>
+    </div>
+
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div>
+          <div class="eyebrow"><span class="eyebrow-line"></span> {{ 'THE TRUSTCAR DIFFERENCE'|trans }}</div>
+          <h2>{{ 'More than a car.'|trans }}<br><em>{{ 'Peace of mind.'|trans }}</em></h2>
+        </div>
+        <div class="about-copy">
+          <p class="lead">{{ 'Finding the right car should feel exciting, not uncertain.'|trans }}</p>
+          <p>{{ "At TrustCar Auto, we connect you with high-quality Japanese vehicles and guide you through every step of the import journey. Based in Butembo and working online, we're here to make the road from Japan to the Democratic Republic of the Congo a little simpler."|trans }}</p>
+          <a class="text-link" href="#process">{{ 'See how we work'|trans }} <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="container values">
+        <article><span class="value-number">01</span><h3>{{ 'Trust, first'|trans }}</h3><p>{{ 'Clear communication and a process you can follow.'|trans }}</p></article>
+        <article><span class="value-number">02</span><h3>{{ 'Quality matters'|trans }}</h3><p>{{ 'Carefully selected, inspected vehicles from Japan.'|trans }}</p></article>
+        <article><span class="value-number">03</span><h3>{{ 'Here for you'|trans }}</h3><p>{{ 'Professional support from selection to delivery.'|trans }}</p></article>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="container">
+        <div class="section-heading">
+          <div><div class="eyebrow"><span class="eyebrow-line"></span> {{ 'SIMPLE & TRANSPARENT'|trans }}</div><h2>{{ 'From Japan to'|trans }}<br><em>{{ 'your driveway.'|trans }}</em></h2></div>
+          <p>{{ 'Your next vehicle is closer than you think. We keep you informed throughout the journey.'|trans }}</p>
+        </div>
+        <div class="steps">
+          <article class="step"><span class="step-num">01</span><div class="step-line"></div><h3>{{ 'Choose your vehicle'|trans }}</h3><p>{{ "Tell us what you're looking for. We'll help you find a quality Japanese vehicle that fits your needs."|trans }}</p></article>
+          <article class="step"><span class="step-num">02</span><div class="step-line"></div><h3>{{ 'Pay 70% upfront'|trans }}</h3><p>{{ "Once you've chosen your car, pay 70% of the required amount to begin the import process."|trans }}</p></article>
+          <article class="step"><span class="step-num">03</span><div class="step-line"></div><h3>{{ 'Follow the journey'|trans }}</h3><p>{{ 'Stay informed as your vehicle makes its way from Japan to the Democratic Republic of the Congo.'|trans }}</p></article>
+          <article class="step"><span class="step-num">04</span><div class="step-line"></div><h3>{{ 'Take delivery'|trans }}</h3><p>{{ "Pay the remaining balance once your vehicle reaches you. Then it's time to enjoy the drive."|trans }}</p></article>
+        </div>
+        <p class="process-note">{{ 'Payment and delivery details are confirmed with you before purchase.'|trans }}</p>
+      </div>
+    </section>
+
+    <section class="section deliveries" id="deliveries">
+      <div class="container">
+        <div class="section-heading">
+          <div><div class="eyebrow"><span class="eyebrow-line"></span> {{ 'THE JOURNEY IN PICTURES'|trans }}</div><h2>{{ 'Delivered with care.'|trans }}<br><em>{{ 'Driven with confidence.'|trans }}</em></h2></div>
+          <p>{{ 'Every delivery has a story. Explore the vehicles that have made the journey to their new owners.'|trans }}</p>
+        </div>
+        {% set gallery = site.data.vehicles %}
+        {% if gallery.cloud_name and gallery.vehicles is not empty %}
+          <div class="gallery">
+            {% for vehicle in gallery.vehicles %}
+              <article class="vehicle-card">
+                {% set vehicle_title = site.language == 'fr' ? vehicle.title_fr|default(vehicle.title) : vehicle.title %}
+                {% set vehicle_alt = site.language == 'fr' ? vehicle.alt_fr|default(vehicle_title) : vehicle.alt|default(vehicle_title) %}
+                {% set vehicle_description = site.language == 'fr' ? vehicle.description_fr|default('') : vehicle.description|default('') %}
+                <a class="vehicle-image-link" href="https://res.cloudinary.com/{{ gallery.cloud_name|e('html_attr') }}/image/upload/{{ vehicle.public_id|e('html_attr') }}" target="_blank" rel="noopener noreferrer" aria-label="{{ 'View full image of %vehicle% (opens in a new tab)'|trans({'%vehicle%': vehicle_alt})|e('html_attr') }}">
+                  <img src="https://res.cloudinary.com/{{ gallery.cloud_name|e('html_attr') }}/image/upload/f_auto,q_auto,c_fill,w_1000,h_700/{{ vehicle.public_id|e('html_attr') }}" alt="{{ vehicle_alt|e('html_attr') }}" loading="lazy" width="1000" height="700">
+                </a>
+                <div class="vehicle-details"><div><span class="card-label">{{ 'DELIVERED VEHICLE'|trans }}</span><h3>{{ vehicle_title }}</h3>{% if vehicle_description %}<p>{{ vehicle_description }}</p>{% endif %}</div><span class="card-arrow" aria-hidden="true">↗</span></div>
+              </article>
+            {% endfor %}
+          </div>
+        {% else %}
+          <div class="gallery-empty"><span class="empty-icon" aria-hidden="true">✳</span><div><h3>{{ 'Good journeys are worth sharing.'|trans }}</h3><p>{{ 'Our delivery gallery is coming soon. Check back for vehicles delivered by TrustCar Auto.'|trans }}</p></div></div>
+        {% endif %}
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-inner">
+        <div>
+          <div class="eyebrow light-eyebrow"><span class="eyebrow-line"></span> {{ "LET'S GET YOU MOVING"|trans }}</div>
+          <h2>{{ 'Your next chapter'|trans }}<br>{{ 'starts'|trans }} <em>{{ 'here.'|trans }}</em></h2>
+          <p>{{ "Have a vehicle in mind? Let's make the journey together."|trans }}</p>
+          <div class="contact-actions">
+            {% if site.data.business.whatsapp %}
+              <a class="button button-whatsapp" href="https://wa.me/{{ site.data.business.whatsapp|replace({'+': '', ' ': '', '-': '', '(': '', ')': ''})|e('html_attr') }}" target="_blank" rel="noopener noreferrer">{{ 'Chat on WhatsApp'|trans }} <span aria-hidden="true">↗</span></a>
+            {% endif %}
+            {% if site.data.business.email %}
+              <a class="button button-outline" href="mailto:{{ site.data.business.email|e('html_attr') }}">{{ 'Email us'|trans }} <span aria-hidden="true">↗</span></a>
+            {% endif %}
+          </div>
+        </div>
+        <div class="contact-location"><span class="location-icon" aria-hidden="true">⌁</span><span>{{ 'BASED IN'|trans }}<br><strong>{{ 'Butembo, DR Congo'|trans }}</strong><br>{{ 'Available online'|trans }}</span></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#top" aria-label="{{ 'TrustCar Auto home'|trans }}"><img src="{{ site.language == 'fr' ? '../' : '' }}images/TrustCarAutoLogo.png" alt="" width="500" height="500"></a>
+      <p>{{ 'From Japan to Your Driveway.'|trans }}</p>
+      <span>© {{ "now"|date("Y") }} TrustCar Auto</span>
+    </div>
+  </footer>
+  <script>
+    const mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenu.addEventListener('click', (event) => {
+      if (event.target.closest('.mobile-navigation a')) mobileMenu.open = false;
+    });
+    mobileMenu.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && mobileMenu.open) {
+        mobileMenu.open = false;
+        mobileMenu.querySelector('summary').focus();
+      }
+    });
+  </script>
+</body>
+</html>

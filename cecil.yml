@@ -1,0 +1,13 @@
+title: TrustCar Auto
+description: Reliable Japanese vehicle imports to the Democratic Republic of the Congo.
+baseurl: /
+language: en
+languages:
+  - code: en
+    name: English
+    locale: en_US
+  - code: fr
+    name: Français
+    locale: fr_FR
+    config:
+      description: Importation fiable de véhicules japonais en République démocratique du Congo.
